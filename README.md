@@ -1,36 +1,148 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+```markdown
+# Horror Interface
+
+A horror-themed desktop game interface built with Next.js and Electron. Features a retro terminal aesthetic with creepy vibes.
+
+## Tech Stack
+
+- **Next.js 16** - React framework
+- **Electron** - Desktop app wrapper
+- **Tailwind CSS 4** - Styling
+- **Zustand** - State management
+- **Howler.js** - Audio/sound effects
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+Make sure you have Node.js installed (v18 or higher recommended).
+
+### Installation
+
+```bash
+# Clone the repo
+git clone [https://github.com/FaaWell/contribution-ideas.git](https://github.com/FaaWell/hororr.git)
+cd contribution-ideas
+
+# Install dependencies
+npm install
+
+```
+
+### Running the App
+
+**Web version:**
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open http://localhost:3000 in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+**Desktop version (Electron):**
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run electron:dev
 
-## Learn More
+```
 
-To learn more about Next.js, take a look at the following resources:
+### Building for Production
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+# Build desktop app
+npm run electron:build
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
 
-## Deploy on Vercel
+## Project Structure
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+contribution-ideas/
+├── app/              # Next.js app router pages
+├── components/       # React components
+│   ├── Footer.tsx
+│   ├── GameLayout.tsx
+│   ├── Header.tsx
+│   ├── MainScreen.tsx
+│   └── Terminal.tsx
+├── electron/         # Electron main process
+├── hooks/            # Custom React hooks
+├── lib/              # Utility functions
+├── public/           # Static assets
+├── store/            # Zustand state stores
+└── types/            # TypeScript type definitions
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+
+## Contributing
+
+Want to contribute? Here's how:
+
+1. **Fork this repo** - Click the fork button up top
+2. **Clone your fork**
+```bash
+git clone [https://github.com/FaaWeell/hororr.git](https://github.com/FaaWeell/hororr.git)
+
+```
+
+
+3. **Create a new branch**
+```bash
+git checkout -b feature/your-feature-name
+
+```
+
+
+4. **Make your changes** - Add new features, fix bugs, whatever you want
+5. **Test your changes** - Make sure everything works
+```bash
+npm run dev
+npm run lint
+
+```
+
+
+6. **Commit your changes**
+```bash
+git add .
+git commit -m "Add: your feature description"
+
+```
+
+
+7. **Push to your fork**
+```bash
+git push origin feature/your-feature-name
+
+```
+
+
+8. **Open a Pull Request** - Go to the original repo and create a PR
+
+### Contribution Ideas
+
+Here are some high-level technical challenges designated for contributors (yes, you Megatron):
+
+* [ ] **Spatial Audio Engine:** Implement a 3D positioning system using Web Audio API to create immersive, directional horror soundscapes.
+* [ ] **Post-Processing Shader Pipeline:** Develop custom WebGL shaders to simulate realistic CRT monitor decay, chromatic aberration, and signal noise.
+* [ ] **Psychological Horror AI:** Integrate a deterministic state machine that adapts jump-scare timing based on user inactivity or interaction patterns.
+* [ ] **Terminal Hacking Subsystem:** Expand the terminal component into a fully functional shell environment with puzzle-solving mechanics and hidden directories.
+* [ ] **Persistent State Architecture:** Engineer a robust save/load system using Electron's IPC (Inter-Process Communication) to serialize game state to the local file system.
+* [ ] **Reactive Glitch System:** Create a global hook that randomly corrupts UI elements and text rendering based on the in-game "sanity" meter.
+* [ ] **I18n Localization Layer:** Architect a scalable translation system to support multiple languages for global distribution.
+
+### Code Style
+
+* Use TypeScript
+* Follow the existing code patterns
+* Keep components small and focused
+* Comment your code if it's doing something weird
+
+## License
+
+Do whatever you want with it. Just don't blame me if it gives you nightmares.
+
+```
+
+```
